@@ -1,9 +1,9 @@
-
+import Header from "./component/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>Basic react landing page</h1>
+      <Header />
     </div>
   );
 }
