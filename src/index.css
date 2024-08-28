@@ -4,6 +4,10 @@ body { margin: 0; }
 
 button{ border: none; }
 
+figure {
+  margin: 0;
+}
+
 *{
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -13,15 +17,14 @@ button{ border: none; }
 
 .App{
   background-color: white;
+  padding: 0 10%;
 }
 
 header{
-  /* background-color: aliceblue; */
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 100px;
 }
 
 header .brand-img{
@@ -41,3 +44,67 @@ header > button {
   padding: 5px 10px;
   font-size: 15px;
 }
+
+.App > main {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.MainContent > h1{
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 80px;
+  margin: 0;
+}
+
+.MainContent > .text{
+  max-width: 300px;
+  font-weight: 600;
+  color: #5b5b5b;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.MainContent .btn-container{
+  display: flex;;
+  gap: 30px;
+}
+
+.MainContent .btn-container button{
+  font-size: 17px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.MainContent .btn-container button:first-child {
+  background-color: #D01C28;
+  color: white;
+}
+
+.MainContent .btn-container button:last-child {
+  background-color: white;
+  color: #5b5b5b;
+  border: 1px solid black;
+}
+
+.ecommerce-container p{
+  font-size: 15px;
+  color: #7b7b7b;
+  margin-top: 25px;
+}
+
+.ecommerce-container figure {
+  display: flex;
+  gap: 20px;
+}
+
+main .MainImg{
+  display: flex;
+  align-items: center;
+}
+
+
+/* .App > main > figure {
+  justify-content: center;
+} */
