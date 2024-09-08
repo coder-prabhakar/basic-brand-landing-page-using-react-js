@@ -1,3 +1,4 @@
+import '../css/main.css';
 import flipkart from '../img/flipkart-logo.png'
 import amazon from '../img/amazon-logo.png'
 

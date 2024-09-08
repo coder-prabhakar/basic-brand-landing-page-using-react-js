@@ -1,0 +1,105 @@
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menu Button */
+.menuBtn{
+    display: none;
+    cursor: pointer;
+}
+
+/* Logo */
+header .brand-img{
+    width: 80px;
+}
+
+/* Navbar */
+header nav{
+    display: flex;
+    gap: 20px;
+}
+  
+header > nav > a{
+    all: unset;
+    font-style: 17px;
+    font-weight: 500;
+}
+
+header > nav > a:hover{
+    color: var(--red);
+}
+
+/* Login Button */
+header > .loginBtn { font-size: 20px; }
+
+/* Media Quries Max-Width: 700px */
+@media only screen and (max-width: 700px) {
+
+    header{
+        justify-content: start;
+        gap: 20px;
+    }
+  
+    header .menuBtn{
+      display: inherit;
+      height: 25px;
+      padding: 5px;
+      transition: .2s linear;
+    }
+
+    header .fa-xmark{
+        transform: rotate(180deg);
+    }
+
+    header .brand-img{
+        width: 70px;
+    }
+  
+    header nav{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 0px 0px 30px 50px;
+        background-color: white;
+        border-bottom: 1px solid var(--red);
+        z-index: 1;
+        overflow: hidden;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    header .navbar-active {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+
+    header nav a{
+        display: block;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    header nav a:hover{
+        background-color: var(--red);
+        color: white;
+    }
+
+    header .loginBtn { margin-left: auto; }
+}
+
+/* Media Quries Max-Width: 400px */
+@media only screen and (max-width: 400px){
+
+    header{ gap: 15px; }
+
+    header .menuBtn{ height: 20px; }
+
+    header .brand-img{ width: 60px; }
+
+    header .loginBtn { font-size: 15px; }
+}

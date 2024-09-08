@@ -9,6 +9,10 @@ button{
   padding: 5px 10px;
 }
 
+button:hover, a:hover{
+  cursor: pointer;
+}
+
 figure {
   margin: 0;
 }
@@ -30,79 +34,15 @@ figure {
   padding: 0 10%;
 }
 
-header{
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/*********** Media Queries ***********/
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
+  .App{ padding: 0 5%; }
 }
 
-header .brand-img{
-  width: 80px;
+@media only screen and (max-width: 700px) {
+  .App{ padding: 0 30px 30px 30px; }
 }
 
-header > nav > a{
-  all: unset;
-  margin: 0 10px;
-  font-weight: 500;
+@media only screen and (max-width: 400px){
+  .App{ padding: 0 10px 10px 10px; }
 }
-
-header > button { font-size: 15px; }
-
-.App > main {
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.MainContent > h1{
-  font-size: 70px;
-  font-weight: 900;
-  line-height: 80px;
-  margin: 0;
-}
-
-.MainContent > .text{
-  max-width: 300px;
-  font-weight: 600;
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 18px;
-}
-
-.MainContent .btn-container{
-  display: flex;;
-  gap: 30px;
-}
-
-.MainContent .btn-container button{
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.MainContent .btn-container button:last-child {
-  background-color: white;
-  color: var(--gray);
-  border: 1px solid gray;
-}
-
-.ecommerce-container p{
-  font-size: 15px;
-  color: #7b7b7b;
-  margin-top: 25px;
-}
-
-.ecommerce-container figure {
-  display: flex;
-  gap: 20px;
-}
-
-main .MainImg{
-  display: flex;
-  align-items: center;
-}
-
-
-/* .App > main > figure {
-  justify-content: center;
-} */
